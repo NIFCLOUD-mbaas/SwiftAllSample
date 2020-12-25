@@ -1,0 +1,39 @@
+/*
+ Copyright 2017-2018 FUJITSU CLOUD TECHNOLOGIES LIMITED All Rights Reserved.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+
+import Foundation
+
+class Utils {
+    class func formatDate(_ strDate: String?) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date: Date? = dateFormatter.date(from: strDate ?? "")
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        var currentDate: String? = nil
+        if let aDate = date {
+            currentDate = dateFormatter.string(from: aDate)
+        }
+        return currentDate
+    }
+    
+    class func showAlert(_ vc: UIViewController?, title: String?, message msg: String?) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+        })
+        alert.addAction(ok)
+        vc?.present(alert, animated: true)
+    }
+}
