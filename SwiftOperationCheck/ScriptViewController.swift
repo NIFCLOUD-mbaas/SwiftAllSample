@@ -30,7 +30,7 @@ class ScriptViewController: UIViewController {
     @IBAction func execScriptGET(_ sender: Any) {
 
         ProgressHUD.show("Loading...")
-        let script = NCMBScript(name: "testScript.js", method: .get)
+        let script = NCMBScript(name: "testScript_GET.js", method: .get)
 
         // スクリプトの実行
         script.executeInBackground(headers: [:], queries: [:], body: [:], callback: { result in
