@@ -20,18 +20,24 @@ import IQKeyboardManagerSwift
 import UserNotifications
 import AuthenticationServices
 
+// Login with email
+public let EMAIL_KEY    = "test@gmail.com"
+public let PASSWORD_KEY = "123456"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    //********** APIキーの設定 **********
+    let applicationkey = "YOUR_NCMB_APPLICATION_KEY"
+    let clientkey      = "YOUR_NCMB_CLIENT_KEY"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        /***** APIキーの設定とSDKの初期化 *****/
-        NCMB.initialize(applicationKey: "0730e01abce99ac3d5400690cb658a25f79e8f0bac8895dd67283e9b98077d1e", clientKey: "d4175a28a524d55c47057f6f77b47c0c654842521b94488442867c82deb83dac");
+        // SDKの初期化
+        NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
         
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { (credentialState, error) in
@@ -71,8 +77,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    func application(
+        _ application: UIApplication,
+        didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+        
         let installation : NCMBInstallation = NCMBInstallation.currentInstallation
 
         //Device Tokenを設定

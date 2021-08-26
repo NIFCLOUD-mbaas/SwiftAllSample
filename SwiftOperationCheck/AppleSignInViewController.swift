@@ -34,22 +34,23 @@ class AppleSignInViewController: UIViewController {
         super.viewDidAppear(animated)
         performExistingAccountSetupFlows()
     }
+    
     @IBAction func linkWithAppleCredentials(_ sender: Any) {
         if let user = NCMBUser.currentUser {
             if let params = self.appleParam {
                 user.linkWithAppleToken(appleParameters: params, callback: { result in
                     switch result {
-                        case .success:
-                            //認証情報の紐付けが完了したあとの処理
-                            print("会員連携完了しました。")
-                        case let .failure(error):
-                            //認証情報の紐付けに失敗した場合の処理
-                            print("エラー: \(error)")
+                    case .success:
+                        //認証情報の紐付けが完了したあとの処理
+                        print("会員連携完了しました。")
+                    case let .failure(error):
+                        //認証情報の紐付けに失敗した場合の処理
+                        print("エラー: \(error)")
                     }
                 })
             }
         } else {
-                print("ログイン中ユーザがいません。")
+            print("ログイン中ユーザがいません。")
         }
     }
     
@@ -57,12 +58,12 @@ class AppleSignInViewController: UIViewController {
         if let user = NCMBUser.currentUser {
             user.unlink(type: "apple") { (result) in
                 switch result {
-                    case .success:
-                        // 認証情報の紐付け削除が完了したあとの処理
-                        print("会員連携削除が完了しました。")
-                    case let .failure(error):
-                        // 認証情報の紐付け削除が失敗した場合の処理
-                        print("エラー: \(error)")
+                case .success:
+                    // 認証情報の紐付け削除が完了したあとの処理
+                    print("会員連携削除が完了しました。")
+                case let .failure(error):
+                    // 認証情報の紐付け削除が失敗した場合の処理
+                    print("エラー: \(error)")
                 }
             }
         } else {
@@ -128,7 +129,7 @@ extension AppleSignInViewController: ASAuthorizationControllerDelegate {
             let user = NCMBUser()
             // mobile backendに会員登録・認証を行います
             user.signUpWithAppleToken(appleParameters: appleParam, callback: { result in
-            switch result {
+                switch result {
                 case .success:
                     print("会員認証完了しました。")
                 case let .failure(error):
@@ -137,9 +138,9 @@ extension AppleSignInViewController: ASAuthorizationControllerDelegate {
             
             // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
             self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
-        
+            
         case let passwordCredential as ASPasswordCredential:
-        
+            
             // Sign in using an existing iCloud Keychain credential.
             let username = passwordCredential.user
             let password = passwordCredential.password
@@ -163,9 +164,9 @@ extension AppleSignInViewController: ASAuthorizationControllerDelegate {
     }
     
     private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "loginAppleSuccess", sender: self)
-            }
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "loginAppleSuccess", sender: self)
+        }
     }
     
     private func showPasswordCredentialAlert(username: String, password: String) {
