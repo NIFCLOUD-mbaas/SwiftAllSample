@@ -65,8 +65,7 @@ class UserViewController: UIViewController {
     
     @IBAction func requestAuthenticationMail(_ sender: Any) {
         ProgressHUD.show("Loading...")
-        let emailRequest = "\(self.randomWithLength(10))@gmail.com"
-        NCMBUser.requestAuthenticationMailInBackground(mailAddress: emailRequest, callback: { result in
+        NCMBUser.requestAuthenticationMailInBackground(mailAddress: EMAIL_KEY, callback: { result in
             DispatchQueue.main.async {
                 ProgressHUD.dismiss()
                 switch result {
