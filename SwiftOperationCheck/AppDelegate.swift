@@ -21,8 +21,11 @@ import UserNotifications
 import AuthenticationServices
 
 // Login with email
-public let EMAIL_KEY    = "test@gmail.com"
-public let PASSWORD_KEY = "123456"
+public let EMAIL_KEY                       = "test@gmail.com"
+public let PASSWORD_KEY                    = "123456"
+
+// Request authentication email
+public let REQUEST_AUTHENTICATION_MAIL_KEY = "request.authentication.mail@gmail.com"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
