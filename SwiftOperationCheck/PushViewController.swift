@@ -21,7 +21,6 @@ import NCMB
 class PushViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +30,6 @@ class PushViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-            
     }
     
     @IBAction func sendPush(_ sender: Any) {
@@ -46,59 +43,49 @@ class PushViewController: UIViewController {
         push.isSendToIOS = true
         // 即時配信を設定する
         push.setImmediateDelivery()
-
+        
         // プッシュ通知を配信登録する
         push.sendInBackground(callback: { result in
-            ProgressHUD.dismiss()
-            switch result {
-            case .success:
-                print("登録に成功しました。プッシュID: \(push.objectId!)")
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
+                case .success:
+                    print("登録に成功しました。プッシュID: \(push.objectId!)")
                     Utils.showAlert(self, title: "Alert", message: "登録に成功しました。プッシュID: \(push.objectId!)")
-                }
-            case let .failure(error):
-                print("登録に失敗しました: \(error)")
-                DispatchQueue.main.async {
+                case let .failure(error):
+                    print("登録に失敗しました: \(error)")
                     Utils.showAlert(self, title: "Alert", message: "登録に失敗しました: \(error)")
                 }
-                return;
             }
         })
-        
-           
     }
     
     @IBAction func sendRichPush(_ sender: Any) {
         ProgressHUD.show()
-               
-       let push : NCMBPush = NCMBPush()
-       // メッセージの設定
-       push.message = "プッシュ通知です"
-       push.title = "testPush"
-       // android端末を送信対象に設定する
-       push.isSendToIOS = true
-       push.richUrl = "https://mbaas.nifcloud.com/"
-       // 即時配信を設定する
-       push.setImmediateDelivery()
-
-       // プッシュ通知を配信登録する
-       push.sendInBackground(callback: { result in
-           ProgressHUD.dismiss()
-               switch result {
-               case .success:
-                   print("登録に成功しました。プッシュID: \(push.objectId!)")
-                   DispatchQueue.main.async {
-                       Utils.showAlert(self, title: "Alert", message: "登録に成功しました。プッシュID: \(push.objectId!)")
-                   }
-               case let .failure(error):
-                   print("登録に失敗しました: \(error)")
-                   DispatchQueue.main.async {
-                       Utils.showAlert(self, title: "Alert", message: "登録に失敗しました: \(error)")
-                   }
-                   return;
-               }
-           })
-           
+        
+        let push : NCMBPush = NCMBPush()
+        // メッセージの設定
+        push.message = "プッシュ通知です"
+        push.title = "testPush"
+        // android端末を送信対象に設定する
+        push.isSendToIOS = true
+        push.richUrl = "https://mbaas.nifcloud.com/"
+        // 即時配信を設定する
+        push.setImmediateDelivery()
+        
+        // プッシュ通知を配信登録する
+        push.sendInBackground(callback: { result in
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
+                case .success:
+                    print("登録に成功しました。プッシュID: \(push.objectId!)")
+                    Utils.showAlert(self, title: "Alert", message: "登録に成功しました。プッシュID: \(push.objectId!)")
+                case let .failure(error):
+                    print("登録に失敗しました: \(error)")
+                    Utils.showAlert(self, title: "Alert", message: "登録に失敗しました: \(error)")
+                }
+            }
+        })
     }
-    
 }

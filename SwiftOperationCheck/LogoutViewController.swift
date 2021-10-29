@@ -28,25 +28,22 @@ class LogoutViewController: UIViewController {
         ProgressHUD.show("Loading...")
         // ログアウト
         NCMBUser.logOutInBackground(callback: { result in
-            ProgressHUD.dismiss()
-            switch result {
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
                 case .success:
                     // ログアウトに成功した場合の処理
                     print("ログアウトに成功しました")
-                    DispatchQueue.main.async {
-                        if let navController = self.navigationController {
-                            navController.popViewController(animated: true)
-                        }
+                    if let navController = self.navigationController {
+                        navController.popViewController(animated: true)
                     }
-
+                    
                 case let .failure(error):
                     // ログアウトに失敗した場合の処理
                     print("ログアウトに失敗しました: \(error)")
-                    DispatchQueue.main.async {
-                        Utils.showAlert(self, title: "Alert", message: "ログアウトに失敗しました: \(error)")
-                    }
+                    Utils.showAlert(self, title: "Alert", message: "ログアウトに失敗しました: \(error)")
+                }
             }
         })
-           
     }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cVu-Xq-wou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cVu-Xq-wou">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,8 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="v7B-h5-aQa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7ZW-eC-qjq"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <segue destination="tHl-YM-Uic" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="phe-ud-v2d"/>
@@ -39,14 +40,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMenu" textLabel="9fF-R2-vND" style="IBUITableViewCellStyleDefault" id="5gb-gh-6V8">
-                                        <rect key="frame" x="0.0" y="28" width="365" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="365" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5gb-gh-6V8" id="ejl-y6-vSa">
                                             <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9fF-R2-vND">
-                                                    <rect key="frame" x="15" y="0.0" width="335" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="333" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -62,6 +63,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="v9t-Rf-q8c"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kdc-xc-vIp" firstAttribute="leading" secondItem="v9t-Rf-q8c" secondAttribute="leading" constant="10" id="023-OJ-b1M"/>
@@ -69,7 +71,6 @@
                             <constraint firstItem="v9t-Rf-q8c" firstAttribute="trailing" secondItem="kdc-xc-vIp" secondAttribute="trailing" id="YY7-qM-Fii"/>
                             <constraint firstItem="v9t-Rf-q8c" firstAttribute="bottom" secondItem="kdc-xc-vIp" secondAttribute="bottom" id="yVd-8c-33f"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="v9t-Rf-q8c"/>
                     </view>
                     <connections>
                         <outlet property="table" destination="kdc-xc-vIp" id="9qw-ib-f1N"/>
@@ -93,9 +94,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cei-vO-Uuq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cei-vO-Uuq">
                                 <rect key="frame" x="16" y="54" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSendPush"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="L9M-3e-8Lr"/>
                                 </constraints>
@@ -108,9 +110,10 @@
                                     <action selector="sendPush:" destination="dXC-4T-TDc" eventType="touchUpInside" id="OjX-xt-CC1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-lZ-CPN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-lZ-CPN">
                                 <rect key="frame" x="16" y="100" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnRichPush"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3Q0-4Y-rMZ"/>
                                 </constraints>
@@ -124,6 +127,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8lp-uE-WbJ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cei-vO-Uuq" firstAttribute="leading" secondItem="8lp-uE-WbJ" secondAttribute="leading" constant="16" id="7S1-fh-stD"/>
@@ -133,7 +137,6 @@
                             <constraint firstItem="8lp-uE-WbJ" firstAttribute="trailing" secondItem="Cei-vO-Uuq" secondAttribute="trailing" constant="16" id="lEG-8H-jPh"/>
                             <constraint firstItem="8lp-uE-WbJ" firstAttribute="trailing" secondItem="u7p-lZ-CPN" secondAttribute="trailing" constant="16" id="vwk-zH-PcG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8lp-uE-WbJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="fFv-nr-Ou6">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="l7b-UB-RsP"/>
@@ -172,9 +175,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-Ir-L3i">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-Ir-L3i">
                                 <rect key="frame" x="16" y="54" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLoginSigup"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="srL-s3-a7t"/>
                                 </constraints>
@@ -187,9 +191,10 @@
                                     <action selector="createNewUser:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="9AX-Ga-Dxc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l94-SL-3ag">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l94-SL-3ag">
                                 <rect key="frame" x="16" y="196" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnRequestAuthMail"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1Rc-DQ-xHs"/>
                                 </constraints>
@@ -202,9 +207,10 @@
                                     <action selector="requestAuthenticationMail:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="sgP-sV-C10"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nym-VZ-lWB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nym-VZ-lWB">
                                 <rect key="frame" x="16" y="242" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLoginEmail"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Vzb-Ze-mhG"/>
                                     <constraint firstAttribute="height" constant="36" id="rM8-Hj-y1E"/>
@@ -218,9 +224,10 @@
                                     <action selector="loginWithMailAddr:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="zhV-WM-OdY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-Lb-D5q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-Lb-D5q">
                                 <rect key="frame" x="16" y="288" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnAddMemberToRole"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="nhk-xn-5Lo"/>
                                 </constraints>
@@ -233,9 +240,10 @@
                                     <action selector="addMemberToRole:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="9wj-lK-ytu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCl-gc-Bhu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCl-gc-Bhu">
                                 <rect key="frame" x="16" y="334" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnRemoveMemberFromRole"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="7fg-3M-gQq"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="k7c-eY-4DZ"/>
@@ -249,9 +257,10 @@
                                     <action selector="removeMemberFromFole:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="5zh-ii-enz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-bS-wPg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-bS-wPg">
                                 <rect key="frame" x="16" y="100" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnAnonymousAuth"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="oRx-kd-hk5"/>
                                 </constraints>
@@ -264,9 +273,10 @@
                                     <action selector="anonymousLogin:" destination="DwF-j6-Fw1" eventType="touchUpInside" id="If9-E6-rDF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2a-lX-aDa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2a-lX-aDa">
                                 <rect key="frame" x="16" y="380" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnAddChildRole"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="2QO-vH-RoK"/>
                                 </constraints>
@@ -280,6 +290,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="78d-nR-ZDb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="78d-nR-ZDb" firstAttribute="trailing" secondItem="l94-SL-3ag" secondAttribute="trailing" constant="16" id="3vC-vD-PwV"/>
@@ -304,7 +315,6 @@
                             <constraint firstItem="78d-nR-ZDb" firstAttribute="trailing" secondItem="jCl-gc-Bhu" secondAttribute="trailing" constant="16" id="sAQ-H0-SLA"/>
                             <constraint firstItem="78d-nR-ZDb" firstAttribute="trailing" secondItem="nym-VZ-lWB" secondAttribute="trailing" constant="16" id="tJX-C7-5U1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="78d-nR-ZDb"/>
                     </view>
                     <navigationItem key="navigationItem" id="DGu-zF-u0a">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="Rni-6C-ujV"/>
@@ -344,9 +354,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czs-I2-B5Y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czs-I2-B5Y">
                                 <rect key="frame" x="16" y="110" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSave"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="0QN-8T-lS9"/>
                                 </constraints>
@@ -359,9 +370,10 @@
                                     <action selector="btnSaveClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="E5S-hR-ApP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TER-1Y-Hp2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TER-1Y-Hp2">
                                 <rect key="frame" x="16" y="156" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnGetObject"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="mSN-BB-tnS"/>
                                 </constraints>
@@ -374,9 +386,10 @@
                                     <action selector="btnGetClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="LMP-6r-Xn4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k13-D1-agY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k13-D1-agY">
                                 <rect key="frame" x="16" y="202" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnUpdateObject"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="JJR-nk-kjG"/>
                                 </constraints>
@@ -389,9 +402,10 @@
                                     <action selector="btnUpdateClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="Ua1-71-BhP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1n-Gt-kde">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1n-Gt-kde">
                                 <rect key="frame" x="16" y="248" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnDeleteObject"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="OXc-wr-jzv"/>
                                 </constraints>
@@ -404,9 +418,10 @@
                                     <action selector="btnDeleteClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="sqQ-Ij-GIR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iam-Ea-Gk7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iam-Ea-Gk7">
                                 <rect key="frame" x="16" y="294" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnQueryRanking"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3pN-pW-75f"/>
                                 </constraints>
@@ -419,9 +434,10 @@
                                     <action selector="btnRankingClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="SlK-0V-rvQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHt-CM-gxj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHt-CM-gxj">
                                 <rect key="frame" x="16" y="340" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnACL"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="VFh-SQ-Ae3"/>
                                 </constraints>
@@ -434,9 +450,10 @@
                                     <action selector="btnAclClick:" destination="W2e-UI-nOb" eventType="touchUpInside" id="D6e-Je-LrZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azH-ci-6tS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azH-ci-6tS">
                                 <rect key="frame" x="16" y="64" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnQuickStart"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1w0-JT-kmr"/>
                                 </constraints>
@@ -450,6 +467,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="SLc-n2-uBg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SLc-n2-uBg" firstAttribute="trailing" secondItem="iam-Ea-Gk7" secondAttribute="trailing" constant="16" id="17V-xR-gi8"/>
@@ -474,7 +492,6 @@
                             <constraint firstItem="SLc-n2-uBg" firstAttribute="trailing" secondItem="azH-ci-6tS" secondAttribute="trailing" constant="16" id="tov-oA-iLe"/>
                             <constraint firstItem="k1n-Gt-kde" firstAttribute="top" secondItem="k13-D1-agY" secondAttribute="bottom" constant="10" id="yUC-Mr-2SG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="SLc-n2-uBg"/>
                     </view>
                     <navigationItem key="navigationItem" id="6g7-90-wcB">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="3My-Ry-vof"/>
@@ -513,9 +530,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-pe-JGX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-pe-JGX">
                                 <rect key="frame" x="16" y="54" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnUpload"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="cBB-lD-ckl"/>
                                 </constraints>
@@ -528,9 +546,10 @@
                                     <action selector="uploadFile:" destination="JnM-RE-OBN" eventType="touchUpInside" id="eES-4k-iD8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-8N-vbj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-8N-vbj">
                                 <rect key="frame" x="16" y="100" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnGet"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Npl-xT-UIE"/>
                                 </constraints>
@@ -543,9 +562,10 @@
                                     <action selector="getFile:" destination="JnM-RE-OBN" eventType="touchUpInside" id="JPH-wE-mg6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-IU-o6d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-IU-o6d">
                                 <rect key="frame" x="16" y="146" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnDelete"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ds8-aA-8g4"/>
                                 </constraints>
@@ -559,6 +579,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="TOR-Zq-TyH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wob-8N-vbj" firstAttribute="leading" secondItem="TOR-Zq-TyH" secondAttribute="leading" constant="16" id="4Fu-uS-vMo"/>
@@ -571,7 +592,6 @@
                             <constraint firstItem="4ha-pe-JGX" firstAttribute="leading" secondItem="TOR-Zq-TyH" secondAttribute="leading" constant="16" id="moU-4v-688"/>
                             <constraint firstItem="TOR-Zq-TyH" firstAttribute="trailing" secondItem="Wob-8N-vbj" secondAttribute="trailing" constant="16" id="x8u-cZ-iMb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TOR-Zq-TyH"/>
                     </view>
                     <navigationItem key="navigationItem" id="oDy-As-P2O">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="Uyp-4F-VD7"/>
@@ -610,9 +630,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-Fd-Sjm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-Fd-Sjm">
                                 <rect key="frame" x="16" y="54" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnScriptGet"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="T4c-tF-cBz"/>
                                 </constraints>
@@ -625,9 +646,10 @@
                                     <action selector="execScriptGET:" destination="XCI-uS-nr2" eventType="touchUpInside" id="A22-EE-S0L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juE-4G-W7V">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juE-4G-W7V">
                                 <rect key="frame" x="16" y="100" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnScriptPost"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="xaD-dh-SaM"/>
                                 </constraints>
@@ -640,9 +662,10 @@
                                     <action selector="execScriptPOST:" destination="XCI-uS-nr2" eventType="touchUpInside" id="E2z-HN-usi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-AO-uoC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-AO-uoC">
                                 <rect key="frame" x="16" y="146" width="343" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnScriptDelete"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="bMx-vT-OUd"/>
                                 </constraints>
@@ -656,6 +679,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gs3-mX-w7q"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hXC-AO-uoC" firstAttribute="leading" secondItem="gs3-mX-w7q" secondAttribute="leading" constant="16" id="9e8-tD-QWp"/>
@@ -668,7 +692,6 @@
                             <constraint firstItem="juE-4G-W7V" firstAttribute="leading" secondItem="gs3-mX-w7q" secondAttribute="leading" constant="16" id="tDu-Nj-spP"/>
                             <constraint firstItem="gs3-mX-w7q" firstAttribute="trailing" secondItem="wdU-Fd-Sjm" secondAttribute="trailing" constant="16" id="wJf-0E-HJa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gs3-mX-w7q"/>
                     </view>
                     <navigationItem key="navigationItem" id="1xD-Sc-LJn">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="JqK-dB-kwp"/>
@@ -714,9 +737,10 @@
                                     <constraint firstAttribute="height" constant="80" id="rpL-jv-Eyr"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69B-tI-qlM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69B-tI-qlM">
                                 <rect key="frame" x="117.5" y="423.5" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLinkWithApple"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Rra-TM-rto"/>
                                     <constraint firstAttribute="width" constant="140" id="gJR-Ap-tgT"/>
@@ -727,9 +751,10 @@
                                     <action selector="linkWithAppleCredentials:" destination="x8G-w5-lRe" eventType="touchUpInside" id="4eb-4e-UTu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-A7-MdY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-A7-MdY">
                                 <rect key="frame" x="117.5" y="483.5" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnUnLinkWithApple"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="Dwz-kZ-oRl"/>
                                     <constraint firstAttribute="height" constant="50" id="nM8-hn-aKI"/>
@@ -741,6 +766,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="MQD-lE-aAd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dqn-A7-MdY" firstAttribute="centerX" secondItem="aQ7-x8-bh7" secondAttribute="centerX" id="5vR-lk-OoG"/>
@@ -750,7 +776,6 @@
                             <constraint firstItem="Dh7-an-wvH" firstAttribute="centerX" secondItem="aQ7-x8-bh7" secondAttribute="centerX" id="hLQ-bW-lGQ"/>
                             <constraint firstItem="Dh7-an-wvH" firstAttribute="centerY" secondItem="aQ7-x8-bh7" secondAttribute="centerY" id="rTN-o7-wUf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="MQD-lE-aAd"/>
                     </view>
                     <navigationItem key="navigationItem" id="P6O-Fb-eUu">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="V64-3F-BYO"/>
@@ -817,6 +842,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-rp-BWx">
                                 <rect key="frame" x="83" y="223.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="P8U-Sq-AM4"/>
                                     <constraint firstAttribute="width" constant="209" id="gJp-D1-Kab"/>
@@ -836,6 +862,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSn-Fd-DKe">
                                 <rect key="frame" x="83" y="282.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="1qI-qm-XAS"/>
                                     <constraint firstAttribute="height" constant="30" id="XIL-3X-bi9"/>
@@ -845,6 +872,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grM-lW-vZN">
                                 <rect key="frame" x="117.5" y="405.5" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="ji6-pU-bMY"/>
                                     <constraint firstAttribute="height" constant="60" id="qTw-P8-XO3"/>
@@ -866,6 +894,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-eb-NTX">
                                 <rect key="frame" x="83" y="341.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfConfirm"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pVb-if-w9r"/>
                                     <constraint firstAttribute="width" constant="209" id="wXr-rX-eRt"/>
@@ -884,6 +913,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="po6-9C-zZC"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -907,7 +937,6 @@
                             <constraint firstItem="gnR-eb-NTX" firstAttribute="centerX" secondItem="BQZ-wA-uht" secondAttribute="centerX" id="rtH-RS-Kyb"/>
                             <constraint firstItem="BSn-Fd-DKe" firstAttribute="centerY" secondItem="BQZ-wA-uht" secondAttribute="centerY" constant="-36" id="ymH-yK-kTF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="po6-9C-zZC"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xO7-RD-jRx" appends="YES" id="2IV-0W-MgQ"/>
                         </connections>
@@ -964,6 +993,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vND-Nz-d2B">
                                 <rect key="frame" x="83" y="228.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="EKi-0T-ZRb"/>
                                     <constraint firstAttribute="height" constant="30" id="ZDK-NQ-bqX"/>
@@ -983,6 +1013,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWe-Hn-fcV">
                                 <rect key="frame" x="83" y="287.5" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="Cig-Xv-TIP"/>
                                     <constraint firstAttribute="height" constant="30" id="YNt-OR-aDs"/>
@@ -992,6 +1023,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ik4-eJ-4ch">
                                 <rect key="frame" x="117.5" y="341.5" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogin"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="R8B-Cy-zgK"/>
                                     <constraint firstAttribute="width" constant="140" id="djg-Bc-4HC"/>
@@ -1001,8 +1033,9 @@
                                     <action selector="loginBtn:" destination="bbu-Ld-Wzl" eventType="touchUpInside" id="cZe-qH-FOc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-Uc-cMZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-Uc-cMZ">
                                 <rect key="frame" x="152.5" y="414.5" width="70" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnMoveToSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4bj-2o-oQZ"/>
                                     <constraint firstAttribute="height" constant="30" id="XEs-JC-HBe"/>
@@ -1024,6 +1057,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hgk-TD-pRQ"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -1044,7 +1078,6 @@
                             <constraint firstItem="Qyg-Uc-cMZ" firstAttribute="centerY" secondItem="QRp-kN-BLt" secondAttribute="centerY" constant="96" id="pNE-uw-Irt"/>
                             <constraint firstItem="K2f-sr-kTn" firstAttribute="centerX" secondItem="QRp-kN-BLt" secondAttribute="centerX" constant="-76.5" id="vc0-df-tYm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Hgk-TD-pRQ"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Pyl-11-Nkb" appends="YES" id="KSh-wH-Pkn"/>
                         </connections>
@@ -1075,9 +1108,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSk-By-uha">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSk-By-uha">
                                 <rect key="frame" x="117.5" y="308.5" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogout"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="Glb-1A-2bH"/>
                                     <constraint firstAttribute="height" constant="50" id="kbA-uC-7II"/>
@@ -1089,12 +1123,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="sly-Lb-DEo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tSk-By-uha" firstAttribute="centerY" secondItem="d4P-KB-S9D" secondAttribute="centerY" id="4q4-4Q-9Bp"/>
                             <constraint firstItem="tSk-By-uha" firstAttribute="centerX" secondItem="d4P-KB-S9D" secondAttribute="centerX" id="ddg-wh-Yut"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="sly-Lb-DEo"/>
                     </view>
                     <navigationItem key="navigationItem" id="eYl-Zn-LTB"/>
                     <connections>
@@ -1107,7 +1141,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cNA-7C-8oi"/>
+        <segue reference="SJ9-UX-hVa"/>
         <segue reference="4Rt-JN-hfp"/>
     </inferredMetricsTieBreakers>
     <resources>

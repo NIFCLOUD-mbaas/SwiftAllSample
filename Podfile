@@ -10,5 +10,9 @@ target 'SwiftOperationCheck' do
   pod 'UITextView+Placeholder'
   pod 'ProgressHUD'
   pod 'IQKeyboardManagerSwift'
+  
+  target 'SwiftOperationCheckUITests' do
+    pod 'NCMB', :git => 'https://github.com/NIFCLOUD-mbaas/ncmb_swift.git'
+  end
 
 end

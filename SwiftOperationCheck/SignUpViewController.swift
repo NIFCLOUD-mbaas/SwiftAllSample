@@ -19,7 +19,6 @@ class SignUpViewController: UIViewController {
     // errorLabel
     @IBOutlet weak var errorLabel: UILabel!
     
-
     // 画面表示時に実行される
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,22 +62,17 @@ class SignUpViewController: UIViewController {
             // TextFieldを空に
             DispatchQueue.main.async {
                 self.cleanTextField()
-            }
-            
-            switch result {
+                switch result {
                 case .success:
                     // 新規登録成功時の処理
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "signUpSuccess", sender: self)
-                    }
+                    self.performSegue(withIdentifier: "signUpSuccess", sender: self)
                     print("ログインに成功しました:\(String(describing: user.objectId))")
                 case let .failure(error):
                     // 新規登録失敗時の処理
-                    DispatchQueue.main.async {
-                        self.errorLabel.text = "ログインに失敗しました:\((error as NSError).code)"
-                    }
+                    self.errorLabel.text = "ログインに失敗しました:\((error as NSError).code)"
                     print("ログインに失敗しました:\((error as NSError).code)")
                 }
+            }
         })
     }
     

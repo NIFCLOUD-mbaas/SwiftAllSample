@@ -33,8 +33,6 @@ class FilestoreViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        
     }
     
     @IBAction func uploadFile(_ sender: Any) {
@@ -44,19 +42,16 @@ class FilestoreViewController: UIViewController {
         let file : NCMBFile = NCMBFile(fileName: "ncmb.txt")
         // アップロード
         file.saveInBackground(data: data, callback: { result in
-            ProgressHUD.dismiss()
-            switch result {
-            case .success:
-                print("保存に成功しました")
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
+                case .success:
+                    print("保存に成功しました")
                     Utils.showAlert(self, title: "Alert", message: "保存に成功しました")
-                }
-            case let .failure(error):
-                print("保存に失敗しました: \(error)")
-                DispatchQueue.main.async {
+                case let .failure(error):
+                    print("保存に失敗しました: \(error)")
                     Utils.showAlert(self, title: "Alert", message: "保存に失敗しました: \(error)")
                 }
-                return;
             }
         })
     }
@@ -65,49 +60,41 @@ class FilestoreViewController: UIViewController {
         ProgressHUD.show("Please wait...")
         // ファイル名の指定
         let file : NCMBFile = NCMBFile(fileName: "ncmb.txt")
-
+        
         // ファイルの取得
         file.fetchInBackground(callback: { result in
-            ProgressHUD.dismiss()
-            switch result {
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
                 case let .success(data):
                     print("取得に成功しました: \(String(describing: data))")
-                    DispatchQueue.main.async {
-                        Utils.showAlert(self, title: "Alert", message: "取得に成功しました: \(String(describing: data))")
-                    }
+                    Utils.showAlert(self, title: "Alert", message: "取得に成功しました: \(String(describing: data))")
                 case let .failure(error):
                     print("取得に失敗しました: \(error)")
-                    DispatchQueue.main.async {
-                        Utils.showAlert(self, title: "Alert", message: "取得に失敗しました: \(error)")
-                    }
-                    return;
+                    Utils.showAlert(self, title: "Alert", message: "取得に失敗しました: \(error)")
+                }
             }
         })
-
     }
     
     @IBAction func deleteFile(_ sender: Any) {
         ProgressHUD.show("Please wait...")
         // ファイルオブジェクトの作成
         let file : NCMBFile = NCMBFile(fileName: "ncmb.txt")
-
+        
         // ファイルの削除
         file.deleteInBackground(callback: { result in
-            ProgressHUD.dismiss()
-            switch result {
+            DispatchQueue.main.async {
+                ProgressHUD.dismiss()
+                switch result {
                 case .success:
                     print("削除に成功しました")
-                    DispatchQueue.main.async {
-                        Utils.showAlert(self, title: "Alert", message: "削除に成功しました")
-                    }
+                    Utils.showAlert(self, title: "Alert", message: "削除に成功しました")
                 case let .failure(error):
                     print("削除に失敗しました: \(error)")
-                    DispatchQueue.main.async {
-                        Utils.showAlert(self, title: "Alert", message: "削除に失敗しました: \(error)")
-                    }
-                    return;
+                    Utils.showAlert(self, title: "Alert", message: "削除に失敗しました: \(error)")
+                }
             }
         })
-
     }
 }

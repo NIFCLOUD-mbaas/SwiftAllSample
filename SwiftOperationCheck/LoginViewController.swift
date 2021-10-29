@@ -44,22 +44,17 @@ class LoginViewController: UIViewController {
             // TextFieldを空に
             DispatchQueue.main.async {
                 self.cleanTextField()
-            }
-            
-            switch result {
-            case .success:
-                // ログインに成功した場合の処理
-                print("ログインに成功しました")
-                DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    // ログインに成功した場合の処理
+                    print("ログインに成功しました")
                     self.performSegue(withIdentifier: "loginSuccess", sender: self)
-                }
-                
-            case let .failure(error):
-                // 新規登録失敗時の処理
-                DispatchQueue.main.async {
+                    
+                case let .failure(error):
+                    // 新規登録失敗時の処理
                     self.errorLabel.text = "ログインに失敗しました:\(error)"
+                    print("ログインに失敗しました:\(error)")
                 }
-                print("ログインに失敗しました:\(error)")
             }
         })
         
@@ -103,5 +98,5 @@ class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         
     }
-
+    
 }

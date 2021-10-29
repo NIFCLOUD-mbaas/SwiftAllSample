@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C62F9940ED12DB53713BFB3 /* Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE00E612EFEB89A93A6A363 /* Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework */; };
 		1702F0D924ADDF24003EB59D /* ScriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702F0D824ADDF24003EB59D /* ScriptViewController.swift */; };
 		1702F0DB24ADE6AB003EB59D /* AppleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702F0DA24ADE6AB003EB59D /* AppleSignInViewController.swift */; };
 		17378D1C20F8804F00843502 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378D1B20F8804F00843502 /* Utils.swift */; };
@@ -25,8 +26,27 @@
 		17E87A1E20F7546100D21861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E87A1C20F7546100D21861 /* LaunchScreen.storyboard */; };
 		17E87A2C20F75ABA00D21861 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E87A2B20F75ABA00D21861 /* SWRevealViewController.m */; };
 		17E87A2E20F75CB600D21861 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E87A2D20F75CB600D21861 /* MenuViewController.swift */; };
+		484F34A926D648C20011C183 /* DataStoreUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34A826D648C20011C183 /* DataStoreUITest.swift */; };
+		484F34AB26D64A170011C183 /* ScriptUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34AA26D64A170011C183 /* ScriptUITest.swift */; };
+		484F34AD26D740D60011C183 /* FileStoreUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34AC26D740D60011C183 /* FileStoreUITest.swift */; };
+		484F34AF26D742070011C183 /* AppleSignInUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34AE26D742070011C183 /* AppleSignInUITest.swift */; };
+		484F34B126D743230011C183 /* UserUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34B026D743230011C183 /* UserUITest.swift */; };
+		484F34B326D74FFD0011C183 /* LoginUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F34B226D74FFD0011C183 /* LoginUITest.swift */; };
+		489A753A26D78635003ED5E1 /* SignUpUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A753926D78635003ED5E1 /* SignUpUITest.swift */; };
+		489A753C26D78DB8003ED5E1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A753B26D78DB7003ED5E1 /* Common.swift */; };
+		489A753E26D79B62003ED5E1 /* PushUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A753D26D79B62003ED5E1 /* PushUITest.swift */; };
 		9204EE10086A2F2DC95E9778 /* Pods_SwiftOperationCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2483E6F26473994357C2EEA0 /* Pods_SwiftOperationCheck.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		484F34A326D647EA0011C183 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17E87A0820F7546100D21861 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17E87A0F20F7546100D21861;
+			remoteInfo = SwiftOperationCheck;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1702F0D824ADDF24003EB59D /* ScriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +72,23 @@
 		17E87A2A20F75ABA00D21861 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		17E87A2B20F75ABA00D21861 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		17E87A2D20F75CB600D21861 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		199787C0DF1BEB1FBD286997 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheck-SwiftOperationCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheck-SwiftOperationCheckUITests/Pods-SwiftOperationCheck-SwiftOperationCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1AE00E612EFEB89A93A6A363 /* Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22DF61BC45C5F33C688FBB72 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheck-SwiftOperationCheckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheck-SwiftOperationCheckUITests/Pods-SwiftOperationCheck-SwiftOperationCheckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2483E6F26473994357C2EEA0 /* Pods_SwiftOperationCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOperationCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B0AF13C68BBF6FF0ACD8D3 /* Pods-SwiftOperationCheckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheckUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheckUITests/Pods-SwiftOperationCheckUITests.release.xcconfig"; sourceTree = "<group>"; };
+		484F349D26D647EA0011C183 /* SwiftOperationCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftOperationCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		484F34A826D648C20011C183 /* DataStoreUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreUITest.swift; sourceTree = "<group>"; };
+		484F34AA26D64A170011C183 /* ScriptUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptUITest.swift; sourceTree = "<group>"; };
+		484F34AC26D740D60011C183 /* FileStoreUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStoreUITest.swift; sourceTree = "<group>"; };
+		484F34AE26D742070011C183 /* AppleSignInUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInUITest.swift; sourceTree = "<group>"; };
+		484F34B026D743230011C183 /* UserUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUITest.swift; sourceTree = "<group>"; };
+		484F34B226D74FFD0011C183 /* LoginUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITest.swift; sourceTree = "<group>"; };
+		489A753926D78635003ED5E1 /* SignUpUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITest.swift; sourceTree = "<group>"; };
+		489A753B26D78DB7003ED5E1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		489A753D26D79B62003ED5E1 /* PushUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUITest.swift; sourceTree = "<group>"; };
 		BF19C41B3DBFA74A3B44B62F /* Pods-SwiftOperationCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheck/Pods-SwiftOperationCheck.release.xcconfig"; sourceTree = "<group>"; };
+		CA338E65011FE94C99BA0830 /* Pods-SwiftOperationCheckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheckUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheckUITests/Pods-SwiftOperationCheckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB9FEA62B11644BFD8CB5466 /* Pods-SwiftOperationCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOperationCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOperationCheck/Pods-SwiftOperationCheck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +98,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9204EE10086A2F2DC95E9778 /* Pods_SwiftOperationCheck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484F349A26D647EA0011C183 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C62F9940ED12DB53713BFB3 /* Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				17E87A1220F7546100D21861 /* SwiftOperationCheck */,
+				484F349E26D647EA0011C183 /* SwiftOperationCheckUITests */,
 				17E87A1120F7546100D21861 /* Products */,
 				741BE7B2B8970C15128AC64D /* Pods */,
 				D3898B5AA7E6D183E0F67594 /* Frameworks */,
@@ -99,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				17E87A1020F7546100D21861 /* SwiftOperationCheck.app */,
+				484F349D26D647EA0011C183 /* SwiftOperationCheckUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,11 +185,31 @@
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		484F349E26D647EA0011C183 /* SwiftOperationCheckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				489A753B26D78DB7003ED5E1 /* Common.swift */,
+				484F34A826D648C20011C183 /* DataStoreUITest.swift */,
+				484F34AA26D64A170011C183 /* ScriptUITest.swift */,
+				484F34AC26D740D60011C183 /* FileStoreUITest.swift */,
+				484F34AE26D742070011C183 /* AppleSignInUITest.swift */,
+				484F34B026D743230011C183 /* UserUITest.swift */,
+				484F34B226D74FFD0011C183 /* LoginUITest.swift */,
+				489A753926D78635003ED5E1 /* SignUpUITest.swift */,
+				489A753D26D79B62003ED5E1 /* PushUITest.swift */,
+			);
+			path = SwiftOperationCheckUITests;
+			sourceTree = "<group>";
+		};
 		741BE7B2B8970C15128AC64D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EB9FEA62B11644BFD8CB5466 /* Pods-SwiftOperationCheck.debug.xcconfig */,
 				BF19C41B3DBFA74A3B44B62F /* Pods-SwiftOperationCheck.release.xcconfig */,
+				CA338E65011FE94C99BA0830 /* Pods-SwiftOperationCheckUITests.debug.xcconfig */,
+				28B0AF13C68BBF6FF0ACD8D3 /* Pods-SwiftOperationCheckUITests.release.xcconfig */,
+				22DF61BC45C5F33C688FBB72 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.debug.xcconfig */,
+				199787C0DF1BEB1FBD286997 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -153,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2483E6F26473994357C2EEA0 /* Pods_SwiftOperationCheck.framework */,
+				1AE00E612EFEB89A93A6A363 /* Pods_SwiftOperationCheck_SwiftOperationCheckUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,13 +245,33 @@
 			productReference = 17E87A1020F7546100D21861 /* SwiftOperationCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
+		484F349C26D647EA0011C183 /* SwiftOperationCheckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 484F34A726D647EA0011C183 /* Build configuration list for PBXNativeTarget "SwiftOperationCheckUITests" */;
+			buildPhases = (
+				2727F6DC1D081865AAB80612 /* [CP] Check Pods Manifest.lock */,
+				484F349926D647EA0011C183 /* Sources */,
+				484F349A26D647EA0011C183 /* Frameworks */,
+				484F349B26D647EA0011C183 /* Resources */,
+				D3A1C013ECB92C78C4AFE3E4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				484F34A426D647EA0011C183 /* PBXTargetDependency */,
+			);
+			name = SwiftOperationCheckUITests;
+			productName = SwiftOperationCheckUITests;
+			productReference = 484F349D26D647EA0011C183 /* SwiftOperationCheckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		17E87A0820F7546100D21861 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CANCC;
 				TargetAttributes = {
@@ -193,6 +279,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
+					};
+					484F349C26D647EA0011C183 = {
+						CreatedOnToolsVersion = 13.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17E87A0F20F7546100D21861;
 					};
 				};
 			};
@@ -211,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				17E87A0F20F7546100D21861 /* SwiftOperationCheck */,
+				484F349C26D647EA0011C183 /* SwiftOperationCheckUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +315,13 @@
 				17E87A1E20F7546100D21861 /* LaunchScreen.storyboard in Resources */,
 				17E87A1B20F7546100D21861 /* Assets.xcassets in Resources */,
 				17E87A1920F7546100D21861 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484F349B26D647EA0011C183 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +350,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOperationCheck/Pods-SwiftOperationCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2727F6DC1D081865AAB80612 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftOperationCheck-SwiftOperationCheckUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A1C013ECB92C78C4AFE3E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftOperationCheck-SwiftOperationCheckUITests/Pods-SwiftOperationCheck-SwiftOperationCheckUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NCMB/NCMB.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NCMB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOperationCheck-SwiftOperationCheckUITests/Pods-SwiftOperationCheck-SwiftOperationCheckUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA07A347EFB97AFBDB0596AE /* [CP] Check Pods Manifest.lock */ = {
@@ -296,7 +441,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		484F349926D647EA0011C183 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				489A753E26D79B62003ED5E1 /* PushUITest.swift in Sources */,
+				489A753C26D78DB8003ED5E1 /* Common.swift in Sources */,
+				484F34B126D743230011C183 /* UserUITest.swift in Sources */,
+				484F34B326D74FFD0011C183 /* LoginUITest.swift in Sources */,
+				484F34AB26D64A170011C183 /* ScriptUITest.swift in Sources */,
+				484F34AD26D740D60011C183 /* FileStoreUITest.swift in Sources */,
+				489A753A26D78635003ED5E1 /* SignUpUITest.swift in Sources */,
+				484F34AF26D742070011C183 /* AppleSignInUITest.swift in Sources */,
+				484F34A926D648C20011C183 /* DataStoreUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		484F34A426D647EA0011C183 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17E87A0F20F7546100D21861 /* SwiftOperationCheck */;
+			targetProxy = 484F34A326D647EA0011C183 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		17E87A1720F7546100D21861 /* Main.storyboard */ = {
@@ -444,13 +613,16 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftOperationCheck/SwiftOperationCheck.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 249XQWFVHT;
+				DEVELOPMENT_TEAM = 52LV6A2Q7J;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftOperationCheck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vfa.vitalify.mbass-signin";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "asia.vitalify.mbaas-operation-check";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MBassSignInWithApple;
+				PROVISIONING_PROFILE_SPECIFIER = mBaasOperationCheck;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOperationCheck/SWRevealViewController/SwiftOperationCheck-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -467,16 +639,81 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftOperationCheck/SwiftOperationCheck.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 249XQWFVHT;
+				DEVELOPMENT_TEAM = 52LV6A2Q7J;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftOperationCheck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vfa.vitalify.mbass-signin";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "asia.vitalify.mbaas-operation-check";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MBassSignInWithApple;
+				PROVISIONING_PROFILE_SPECIFIER = mBaasOperationCheck;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOperationCheck/SWRevealViewController/SwiftOperationCheck-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		484F34A526D647EA0011C183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22DF61BC45C5F33C688FBB72 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52LV6A2Q7J;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.SwiftOperationCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOperationCheck/SWRevealViewController/SwiftOperationCheck-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftOperationCheck;
+			};
+			name = Debug;
+		};
+		484F34A626D647EA0011C183 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199787C0DF1BEB1FBD286997 /* Pods-SwiftOperationCheck-SwiftOperationCheckUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52LV6A2Q7J;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NCMB\"",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.SwiftOperationCheckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOperationCheck/SWRevealViewController/SwiftOperationCheck-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftOperationCheck;
 			};
 			name = Release;
 		};
@@ -497,6 +734,15 @@
 			buildConfigurations = (
 				17E87A2320F7546100D21861 /* Debug */,
 				17E87A2420F7546100D21861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		484F34A726D647EA0011C183 /* Build configuration list for PBXNativeTarget "SwiftOperationCheckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				484F34A526D647EA0011C183 /* Debug */,
+				484F34A626D647EA0011C183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
