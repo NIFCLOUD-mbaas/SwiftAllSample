@@ -1,7 +1,7 @@
 PODS:
-  - IQKeyboardManagerSwift (6.5.6)
-  - NCMB (1.2.0)
-  - ProgressHUD (2.70)
+  - IQKeyboardManagerSwift (6.5.11)
+  - NCMB (1.3.1)
+  - ProgressHUD (13.6.2)
   - "UITextView+Placeholder (1.4.0)"
 
 DEPENDENCIES:
@@ -22,15 +22,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NCMB:
-    :commit: 921f40bea563633f8cbb0d02432452cd7f0334a2
+    :commit: baf424008726bc40cd56908f0e6ce03a9acbcd2c
     :git: https://github.com/NIFCLOUD-mbaas/ncmb_swift.git
 
 SPEC CHECKSUMS:
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  NCMB: 1923105236f268cb9f001be548871c7f6996821b
-  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  NCMB: 5762e89d344aea9ecd16b042b0b059169dff656f
+  ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 953f1760433c603311604a4c0ea1f6508ed414db
+PODFILE CHECKSUM: c3b34a0b4cb777a6353fd5cf46892ce64801148f
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

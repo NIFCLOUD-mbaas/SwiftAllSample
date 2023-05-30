@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SwiftOperationCheck_SwiftOperationCheckUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SwiftOperationCheck_SwiftOperationCheckUITests
+@end
